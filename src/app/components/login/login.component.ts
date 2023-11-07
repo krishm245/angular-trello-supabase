@@ -32,6 +32,7 @@ export class LoginComponent implements OnInit {
     this.spinner.hide();
     if (result) {
       this.signInSuccess = true;
+      this.router.navigateByUrl('/workspace', { replaceUrl: true });
     } else {
       alert('Could not sign in');
     }
